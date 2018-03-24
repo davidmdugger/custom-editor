@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Text Editor</title>
+  <!-- FONT AWESEOME -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+  <!-- Latest compiled and minified JavaScript -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="css/wysiwyg.css">
+
+  <style>
+    #outputHere{
+      width: 600px;
+      height: 300px;
+      margin: 50px auto;
+      border: 1px solid #343434;
+    }
+  </style>
+</head>
+<body onload="editable()">
+  <div id="wysiwyg" class="container">
+    <div class="row">
+      <div class="wysiwyg-areas col-xs-1">
+        <div id="wysiwyg-menu">
+          <button id="bold"class="btn btn-info">B</button>
+          <button id="italic" class="btn btn-info"><em>I</em></button>
+          <button id="underline" class="btn btn-info"><u>U</u></button>
+          <button id="fontSize" class="btn btn-info">F</button>
+          <button id="fontColor" class="btn btn-info"><i class="fas fa-eye-dropper"></i></button>
+          <button id="highlight" class="btn btn-info">H</button>
+          <button id="link" class="btn btn-info"><i class="fa fa-link"></i></button>
+          <button id="unlink" class="btn btn-info"><i class="fa fa-unlink"></i></button>
+        </div>
+      </div>
+      <div class="wysiwyg-areas col-xs-11">
+        <form id="wysiwyg-content">
+          <textarea id="output" class="form-control" name="textarea" id="textarea"></textarea>
+          <iframe id="editor" class="form-control" name="editor"></iframe>
+          <input id="submitData" class="btn btn-success form-control" type="button" value="Submit" />
+        </form>
+      </div>
+    </div>
+    <div class="row">
+      <div id="outputHere"></div>
+    </div>
+  </div>
+
+
+
+  <script src="js/wysiwyg.js"></script>
+</body>
+</html>
